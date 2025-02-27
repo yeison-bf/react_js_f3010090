@@ -2,33 +2,31 @@ import React, { useState } from 'react'
 import './estilecomponents.css'
 import { FormUser } from './formUser'
 
-const Bienvenida = () => {
-
-  const [dataUses, setDataUsers] = useState([])
-  const insertData = (data) => {
-    console.log(data)
-    setDataUsers([...data, data])
-  }
-
+const UsersList = ({ dataUsers }) => {
   return (
     <>
-      <FormUser insertData={insertData} />
-
-      <table>
+      <h2>LISTADO DE DE USUARIOS</h2>
+      <table className='table bordered'>
         <thead>
-          <th>Email</th>
-          <th>Password</th>
+          <th>Nombre Completo</th>
+          <th>Correo electrónico</th>
+          <th>Acciones</th>
         </thead>
         <tbody>
-          {dataUses && (
+          {dataUsers.map((element)=>(
             <tr>
-              <td></td>
+              <td>{element.nameUser}</td>
+              <td>{element.email}</td>
+              <td>
+                <button className='btn btn-success btn-sm'>editar</button>
+                <button className='btn btn-danger btn-sm'>eliminar</button>
+                </td>
             </tr>
-          )}
+          ))}
         </tbody>
       </table>
     </>
   )
 }
 
-export default Bienvenida
+export default UsersList
