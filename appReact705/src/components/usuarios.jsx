@@ -1,8 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './estilecomponents.css'
 import { FormUser } from './formUser'
 
 const UsersList = ({ dataUsers }) => {
+
+
+  const [registroUser, setRegistroUser] = useState(false)
+
+  useEffect(() => {
+   consultarApi
+  }, [registroUser])
+  
+
+  const consultarApi = () =>{
+    alert()
+    console.log("Inicio de la función")
+  }
+
+
   return (
     <>
       <h2>LISTADO DE DE USUARIOS</h2>

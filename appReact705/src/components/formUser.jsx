@@ -8,6 +8,8 @@ export const FormUser = ({ insertData }) => {
     const guardar = (e) => {
         e.preventDefault()
         insertData({ nameUser, email })
+        setNameUser('')
+        setEmail('')
     }
 
     return (
@@ -16,12 +18,12 @@ export const FormUser = ({ insertData }) => {
             <form onSubmit={guardar} action="">
                 <div className="mb-3">
                     <label className="form-label">Nombre usuario</label>
-                    <input onChange={(e) => setNameUser(e.target.value)}  type="text" className="form-control"/>
+                    <input value={nameUser} onChange={(e) => setNameUser(e.target.value)}  type="text" className="form-control"/>
                 </div>
 
                 <div className="mb-3">
                     <label className="form-label">Email</label>
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control"/>
+                    <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" className="form-control"/>
                 </div>
                 <input className='btn btn-success col-12' type='submit' value="Guardar" />
             </form>
