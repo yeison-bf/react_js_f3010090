@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar } from '../landign/components/navbar'
 
-export const Products = () => {
+export const ProductsHome = () => {
     return (
         <>
             <Navbar />
@@ -9,3 +9,4 @@ export const Products = () => {
         </>
     )
 }
+ 
