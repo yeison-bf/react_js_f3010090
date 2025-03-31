@@ -8,6 +8,7 @@ import { Users } from '../../feature/dashboard/users/users'
 import { Products } from '../../feature/dashboard/products/products'
 import { ProductsHome } from '../../feature/products/products'
 import { Layout } from '../../feature/dashboard/layout'
+import { ViewsUsers } from '../../feature/dashboard/users/components/viewsUsers'
 
 export const RoutesNav = () => {
     return (
@@ -20,6 +21,7 @@ export const RoutesNav = () => {
 
             <Route path='/dashboard' element={ <Layout/>}>
                 <Route path='users' element={<Users />} />
+                <Route path='view-users/:id' element={<ViewsUsers />} />
                 <Route path='products' element={<Products />} />
             </Route>
 

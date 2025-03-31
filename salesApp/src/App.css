@@ -2,3 +2,12 @@
   width: 40%;
   margin: 0 auto;
 }
+
+.fototable{
+  width: 10%;
+  border-radius: 50%;
+}
+
+.fotoTable{
+  width: 100px;
+}
